@@ -12,6 +12,9 @@ import gaming from './gaming.png'
 import smartwatch from './smartwatch2-removebg-preview.png'
 import speaker from './speaker.png'
 import Category from '../commponents/Category/Category'
+import rating_starts from './rating_starts.png'
+import add_icon_white from './add_icon_white.png'
+import add_icon_green from './add_icon_green.png'
 
 
 export const assets={
@@ -25,6 +28,9 @@ export const assets={
     macbook,
     watch,
     smartwatch,
+    rating_starts,
+    add_icon_white,
+    add_icon_green
 
 
 }
@@ -100,4 +106,5 @@ export const product_list =[
         description:"best speaker have ever made",
         category:"headphone"
     },
+
 ]
