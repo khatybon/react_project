@@ -5,8 +5,8 @@ const Category = ({category,setCategory}) => {
 
   return (
     <div className='explore-menu' id='explore-menu'>
+      <br/>
       <h1>Explore our products</h1>
-      <p className='explore-menu-text'>the best prices in the city</p>
       <div className='explore-menu-list'>
         {menu_list.map((item,index)=>{
           return (

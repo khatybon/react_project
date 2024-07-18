@@ -1,0 +1,189 @@
+/* Hero.css */
+
+.container {
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.rounded-3xl {
+    border-radius: 1.5rem; /* 24px */
+}
+
+.min-h-550 {
+    min-height: 550px;
+}
+
+.sm\:min-h-650 {
+    min-height: 650px;
+}
+
+.hero-bg-gradient {
+    background: linear-gradient(to right, #f3f4f6, #e0e0e0); /* Gradient background */
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.pb-8 {
+    padding-bottom: 2rem;
+}
+
+.sm\:pb-0 {
+    padding-bottom: 0;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.sm\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.gap-4 {
+    gap: 1rem;
+}
+
+.sm\:pl-3 {
+    padding-left: 0.75rem;
+}
+
+.pt-12 {
+    padding-top: 3rem;
+}
+
+.sm\:pt-0 {
+    padding-top: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.sm\:text-left {
+    text-align: left;
+}
+
+.order-2 {
+    order: 2;
+}
+
+.sm\:order-1 {
+    order: 1;
+}
+
+.relative {
+    position: relative;
+}
+
+.z-10 {
+    z-index: 10;
+}
+
+.text-2xl {
+    font-size: 1.5rem; /* 24px */
+    font-weight: bold;
+}
+
+.sm\:text-6xl {
+    font-size: 4rem; /* 64px */
+}
+
+.lg\:text-2xl {
+    font-size: 1.5rem; /* 24px */
+}
+
+.text-5xl {
+    font-size: 3rem; /* 48px */
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.text-black {
+    color: black;
+}
+
+.dark\:text-black\/5 {
+    color: rgba(0, 0, 0, 0.05);
+}
+
+.sm\:text-\[80px\] {
+    font-size: 80px;
+}
+
+.md\:text-\[100px\] {
+    font-size: 100px;
+}
+
+.w-\[300px\] {
+    width: 300px;
+}
+
+.h-\[300px\] {
+    height: 300px;
+}
+
+.sm\:h-\[450px\] {
+    height: 450px;
+}
+
+.sm\:w-\[450px\] {
+    width: 450px;
+}
+
+.sm\:scale-150 {
+    transform: scale(1.5);
+}
+
+.lg\:scale-110 {
+    transform: scale(1.1);
+}
+
+.object-contain {
+    object-fit: contain;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.button-shop-now {
+    background-color: #ff3b3f; /* Button background color */
+    color: white; /* Button text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-shop-now:hover {
+    background-color: #e3342f; /* Darker shade on hover */
+}

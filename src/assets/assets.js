@@ -15,7 +15,19 @@ import Category from '../commponents/Category/Category'
 import rating_starts from './rating_starts.png'
 import add_icon_white from './add_icon_white.png'
 import add_icon_green from './add_icon_green.png'
-
+import facebook_icon from './facebook_icon.png'
+import linkedin_icon from './linkedin_icon.png'
+import twitter_icon from './twitter_icon.png'
+import cross_icon from './cross_icon.png'
+import iphone from './iphone-15-pro-max-natural-titanium.png'
+import samsung_1 from './in-galaxy-s2.png'
+import z_fold from './2.png'
+import samsung_2 from './Galaxy-S23-Ultra.png'
+import samsung_3 from './1_GalaxyS23_Ultra_black.png'
+import jbl_3 from './JBL-3.png'
+import jbl_headphone from './R.jpg'
+import jbl_speaker from './enceinte-bluetooth-flip-essential.jpg'
+import xbox from './series-x.jpg'
 
 export const assets={
     logo,
@@ -30,7 +42,11 @@ export const assets={
     smartwatch,
     rating_starts,
     add_icon_white,
-    add_icon_green
+    add_icon_green,
+    facebook_icon,
+    linkedin_icon,
+    twitter_icon,
+    cross_icon
 
 
 }
@@ -40,7 +56,7 @@ export const menu_list=[
         menu_image: earphone
     },
     {
-        menu_name:"gaming",
+        menu_name:"console",
         menu_image: gaming
     },
     {
@@ -48,13 +64,18 @@ export const menu_list=[
         menu_image: watch
     },
     {
-        menu_name:"mac",
+        menu_name:"macbook",
         menu_image: macbook
     },
     {
         menu_name:"speaker",
         menu_image: speaker
     },
+    {
+        menu_name:"phones",
+        menu_image: iphone
+    },
+
 
 ]
 export const product_list =[
@@ -62,7 +83,7 @@ export const product_list =[
         _id:"1",
         name:"product name",
         image:speaker,
-        price:60,
+        price:100,
         description:"best speaker have ever made",
         category:"speaker"
     },
@@ -78,15 +99,15 @@ export const product_list =[
         _id:"3",
         name:"product name",
         image:headphone,
-        price:60,
+        price:75,
         description:"best speaker have ever made",
-        category:"headphone"
+        category:"Headphone"
     },
     {
         _id:"4",
         name:"product name",
         image:macbook,
-        price:60,
+        price:2000,
         description:"best speaker have ever made",
         category:"macbook"
     },
@@ -94,7 +115,7 @@ export const product_list =[
         _id:"5",
         name:"product name",
         image:watch,
-        price:60,
+        price:70,
         description:"best speaker have ever made",
         category:"watch"
     },
@@ -104,7 +125,91 @@ export const product_list =[
         image:earphone,
         price:60,
         description:"best speaker have ever made",
-        category:"headphone"
+        category:"Headphone"
     },
+    {
+        _id:"7",
+        name:"PS 4",
+        image:gaming,
+        price:1700,
+        description:"PS4",
+        category:"console"
+    },
+    {
+        _id:"8",
+        name:"iphone 15 pro max",
+        image:iphone,
+        price:2300,
+        description:"best speaker have ever made",
+        category:"phones"
+    },
+    {
+        _id:"9",
+        name:"Samsung galaxy z Fold",
+        image:z_fold,
+        price:2500,
+        description:"best speaker have ever made",
+        category:"phones"
+    },
+    {
+        _id:"10",
+        name:"Samsung galaxy s24 ultra",
+        image:samsung_1,
+        price:2200,
+        description:"best speaker have ever made",
+        category:"phones"
+    },
+    {
+        _id:"11",
+        name:"Samsung galaxy s23 ultra",
+        image:samsung_2,
+        price:2000,
+        description:"best speaker have ever made",
+        category:"phones"
+    },
+    {
+        _id:"12",
+        name:"Samsung galaxy s23 ultra",
+        image:samsung_3,
+        price:2200,
+        description:"best speaker have ever made",
+        category:"phones"
+    },
+    {
+        _id:"13",
+        name:"JBL speaker",
+        image:jbl_speaker,
+        price:600,
+        description:"best speaker have ever made",
+        category:"speaker"
+    },
+    {
+        _id:"14",
+        name:"JBL headphone",
+        image:jbl_headphone,
+        price:600,
+        description:"best speaker have ever made",
+        category:"Headphone"
+    },
+    
+    {
+        _id:"15",
+        name:"JBL speaker",
+        image:jbl_3,
+        price:600,
+        description:"best speaker have ever made",
+        category:"speaker"
+    },
+    {
+        _id:"16",
+        name:"Xbox series X",
+        image:xbox,
+        price:1300,
+        description:"best speaker have ever made",
+        category:"console"
+    },
+
+
+
 
 ]
