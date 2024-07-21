@@ -1,0 +1,31 @@
+.transactions {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.purchases-and-sales {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.scan-button {
+    margin-bottom: 20px;
+}
+
+.cart-items-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-upload {
+    margin-top: 20px;
+}
+
+.image-upload h2 {
+    margin-bottom: 10px;
+}
+
+.image-upload div {
+    margin-bottom: 10px;
+}

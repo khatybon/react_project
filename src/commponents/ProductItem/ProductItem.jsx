@@ -5,7 +5,7 @@ import { StoreContext } from '../../context/StoreContext'
 const ProductItem = ({id,name,price,description,image}) => {
     
     const{cartItems,addToCart,removeFormCart}=useContext(StoreContext)
-
+    console.log("cartItems product item page = ",cartItems);
 
   return (
     <div className='product-item'>

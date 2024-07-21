@@ -6,16 +6,23 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({});
+    
     const addToCart = (itemId) => {
+        console.log("itemId = ",itemId);
     if (!cartItems[itemId]) {
+        console.log("catItems = ",cartItems);
+
         setCartItems((prev) => ({ ...prev, [itemId]: 1 }))
     } else {
+        console.log("catItems = ",cartItems);
+
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
     }
 }
 
 
     const removeFormCart = (itemId) => {
+
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
     }
     
@@ -24,7 +31,9 @@ const StoreContextProvider = (props) => {
         let totalAmount = 0;
         for (const item in cartItems) {
             if (cartItems[item] > 0) {
+                console.log("product = ",item);
                 let itemInfo = product_list.find((product) => product._id === item);
+                console.log("itemInfoPrice = ",itemInfo )
                 totalAmount += itemInfo.price * cartItems[item];
             }
 

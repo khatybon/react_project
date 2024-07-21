@@ -1,20 +1,25 @@
-// src/pages/home.jsx
 
 import React, { useState } from 'react';
-import Hero from '../Navbar/Hero/Hero';
-import Category from '../ProductDisplay/Category'; // Adjust this if the path is different
-import ProductDisplay from '../ProductDisplay/ProductDisplay';
+import Category from '../../commponents/Category/Category';
+import ProductDisplay from '../../commponents/ProductDisplay/ProductDisplay';
+import Hero from '../../commponents/Navbar/Hero/Hero';
 
-const Home = () => {
+
+export const Home = () => {
   const [category, setCategory] = useState("All");
+  const [showLogin, setShowLogin] = useState(false)
+
 
   return (
-    <div className='home'>
-      <Hero />
-      <Category category={category} setCategory={setCategory} />
-      <ProductDisplay category={category} />
-    </div>
+    <>
+      <div className='home'>
+        <Hero />
+        <Category category={category} setCategory={setCategory} />
+        <ProductDisplay category={category} />
+      </div>
+    </>
   );
+
 };
 
-export default Home;
+

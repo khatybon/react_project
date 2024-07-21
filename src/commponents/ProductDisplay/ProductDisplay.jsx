@@ -8,6 +8,7 @@ const ProductDisplay = ({ category }) => {
     if (!product_list) {
         return <div>Loading...</div>;
     }
+    console.log("productList from product display = ",product_list);
 
     return (
         <div className='product-display' id='product-display'>
@@ -17,7 +18,7 @@ const ProductDisplay = ({ category }) => {
                     if (category==="All"|| category===item.category) {
                       return <ProductItem
                         key={index}
-                        id={item.id}
+                        id={item._id}
                         name={item.name}
                         description={item.description}
                         price={item.price}
