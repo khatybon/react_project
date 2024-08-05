@@ -6,7 +6,7 @@ import LoginPopup from './commponents/LoginPopup/LoginPopup'
 import Cart from './commponents/pages/Cart/Cart'
 import { Route, Routes } from 'react-router-dom'
 import { Home } from './pages/Home/Home'
-import Transaction from './commponents/Transactions/Transaction'
+import Transaction from './commponents/pages/Transactions/Transaction'
 const App = () => {
   const [category, setCategory] = useState("All");
   const [showLogin, setShowLogin] = useState(false)

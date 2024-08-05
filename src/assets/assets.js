@@ -28,6 +28,7 @@ import jbl_3 from './JBL-3.png'
 import jbl_headphone from './R.jpg'
 import jbl_speaker from './enceinte-bluetooth-flip-essential.jpg'
 import xbox from './series-x.jpg'
+import khatib from './KHATIB..png'
 
 export const assets={
     logo,
@@ -46,7 +47,8 @@ export const assets={
     facebook_icon,
     linkedin_icon,
     twitter_icon,
-    cross_icon
+    cross_icon,
+    khatib
 
 
 }

@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import axios from 'axios';
 import './Transaction.css';
+import { StoreContext } from '../../../context/StoreContext';
 
 const Transaction = () => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [scanResult, setScanResult] = useState(null);
+    const { salesItems } = useContext(StoreContext);
+    const [isLoading,setIsLoading] = useState(false);
 
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0]);
@@ -14,29 +17,34 @@ const Transaction = () => {
         if (selectedFile) {
             const formData = new FormData();
             formData.append('file', selectedFile);
-    
+
             try {
+                setIsLoading(true)
                 const response = await axios.post('http://localhost:5000/upload', formData, {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
                 });
+                response.data.map((e)=>{
+                    console.log(e);
+                })
+               
                 setScanResult(response.data);
+                setIsLoading(false);
             } catch (error) {
                 console.error('Error uploading file:', error);
             }
         }
     };
-    
 
     return (
         <div className='transactions'>
-            <div className='purchases-and-sales'>
+            <div className='purchases'>
                 <h1>Purchases</h1>
                 <br />
                 <div className="scan-button">
                     <input type="file" onChange={handleFileChange} />
-                    <button onClick={handleScan}>Scan</button>
+                    <button onClick={handleScan} disabled={isLoading}>{isLoading ? 'Scanning...' : 'Scan'}</button>
                 </div>
                 <br />
                 <div className="cart-items-title">
@@ -51,27 +59,48 @@ const Transaction = () => {
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Date</th>
                                     <th>Item</th>
+                                    <th>Quantity</th>
                                     <th>Price</th>
-                                    <th>Total</th>
-                                    <th>Tax</th>
+                                    
                                 </tr>
                             </thead>
                             <tbody>
                                 {scanResult.map((item, index) => (
+                                
                                     <tr key={index}>
-                                        <td>{item[0]}</td>
-                                        <td>{item[1]}</td>
-                                        <td>{item[2]}</td>
-                                        <td>{item[3]}</td>
-                                        <td>{item[4]}</td>
+                                        <td>{item.Item}</td>
+                                        <td>{item.Quantity}</td>
+                                        <td>{item.Price}</td>
+                                        <td>{item.total ?? 0}</td>
+                                        
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
                     </div>
                 )}
+            </div>
+            <div className='sales'>
+                <h1>Sales</h1>
+                <br />
+                <div className="cart-items-title">
+                    <p>Title</p>
+                    <p>Price</p>
+                    <p>Quantity</p>
+                    <p>Total</p>
+                </div>
+                <hr />
+                {salesItems.map((item, index) => (
+                    <div key={index} className='cart-items-item'>
+                        <p>{item.name}</p>
+                        <p>${item.price}</p>
+                        <p>{item.quantity}</p>
+                        <p>${item.total}</p>
+                    </div>
+                    
+                ))}
+                <hr />
             </div>
         </div>
     );

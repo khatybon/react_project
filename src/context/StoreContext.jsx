@@ -4,42 +4,35 @@ import { product_list } from "../assets/assets";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
-
     const [cartItems, setCartItems] = useState({});
-    
+    const [salesItems, setSalesItems] = useState([]);
+
     const addToCart = (itemId) => {
-        console.log("itemId = ",itemId);
-    if (!cartItems[itemId]) {
-        console.log("catItems = ",cartItems);
-
-        setCartItems((prev) => ({ ...prev, [itemId]: 1 }))
-    } else {
-        console.log("catItems = ",cartItems);
-
-        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
-    }
-}
-
+        if (!cartItems[itemId]) {
+            setCartItems((prev) => ({ ...prev, [itemId]: 1 }));
+        } else {
+            setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+        }
+    };
 
     const removeFormCart = (itemId) => {
-
-        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
-    }
-    
+        setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    };
 
     const getTotalCartAmount = () => {
         let totalAmount = 0;
         for (const item in cartItems) {
             if (cartItems[item] > 0) {
-                console.log("product = ",item);
                 let itemInfo = product_list.find((product) => product._id === item);
-                console.log("itemInfoPrice = ",itemInfo )
                 totalAmount += itemInfo.price * cartItems[item];
             }
-
         }
         return totalAmount;
-    }
+    };
+
+    const addToSales = (items) => {
+        setSalesItems((prev) => [...prev, ...items]);
+    };
 
     const contextValue = {
         product_list,
@@ -47,8 +40,9 @@ const StoreContextProvider = (props) => {
         setCartItems,
         addToCart,
         removeFormCart,
-        getTotalCartAmount
-
+        getTotalCartAmount,
+        addToSales,
+        salesItems
     };
 
     return (

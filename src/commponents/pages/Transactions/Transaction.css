@@ -3,7 +3,7 @@
     font-family: Arial, sans-serif;
 }
 
-.purchases-and-sales {
+.purchases {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
@@ -28,4 +28,20 @@
 
 .image-upload div {
     margin-bottom: 10px;
+}
+.cart-items-title{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    color: gray;
+    font-size: max(1vw,12px);
+}
+.cart-items-item{
+    margin: 10px 0px;
+    color: black;
+}
+.cart hr{
+    height: 1px;
+    background-color: #e2e2e2;
+    border: none;
 }
